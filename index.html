@@ -14,20 +14,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="tarih">
+      
+
+    </div>
    <div class="main">
      <div class="input-items">
        <div class="input-group">
          <span class="input-group-text">Adınız ve Soyadınız</span>
-         <input type="text" aria-label="First name" class="form-control" />
-         <input type="text" aria-label="Last name" class="form-control" />
+         <input type="text" aria-label="First name" class="form-control" id="name" />
+         <input type="text" aria-label="Last name" class="form-control" id="surname" />
       </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">TC Kimlik Numaranız</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="tc">
        </div
      </div>  
      <div class="selects">
-         <select class="form-select" aria-label="Default select example">
+         <select class="form-select" aria-label="Default select example" id="secilenParti">
              <option selected>Milletvekili Seçiminizi Yapınız</option>
              <option value="CHP">CHP</option>
              <option value="AKP">AKP</option>
@@ -42,10 +46,21 @@
      </div>
      <div class="buttons">
         <div class="d-grid gap-4 col-10 mx-auto">
-            <button class="btn btn-outline-success" type="button">Kaydet</button>
-            <button class="btn btn-outline-success" type="button">Sonuçları Görüntüle</button>
+            <button class="btn btn-outline-success" type="button" id="save">Kaydet</button>
+            <button class="btn btn-outline-success" type="button" id="result">Sonuçları Görüntüle</button>
           </div>
      </div>
+     <div id="temp">
+      <ul id="readData"></ul>
+     </div>
+    
+       <div class="chart">
+         <canvas id="myChart"></canvas>
+      </div>
+    </div>
+   
  </div> 
     </body>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>
